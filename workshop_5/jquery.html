@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   </head>
+   <body onload="greetings();">
+      <button id="btn1" onclick="updateTextUsingID();">Update btn1 Text using ID jQuery</button>
+      <br/><br/>
+      <button class="btn2" onclick="updateTextUsingClass();">Update btn2 Text using Class jQuery</button>
+
+      <script type="text/javascript">
+         function updateTextUsingID(){
+            $('#btn1').html('btn1 text changed.');
+            $('#btn1').css('background-color', "green");
+            $('#btn1').css('color', "white");
+         }
+         function updateTextUsingClass(){
+            $('.btn2').html('btn2 text changed.');
+            $('.btn2').css('background-color', "green");
+         }
+      </script>
+   </body>
+</html>
