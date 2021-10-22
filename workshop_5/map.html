@@ -12,8 +12,8 @@
    </head>
    <body>
       <h3>Map</h3>
+      <button onclick="loadMap();">Load Map</button>
       <div id="mapid"></div>
-
       <script src="../assets/js/myScript.js"></script>
       <script>
          function internalCall(){
@@ -23,10 +23,10 @@
          }
       </script>
 
-      
       <script type="text/javascript">
-         var mymap = L.map('mapid');
-         mymap.setView([51.505, -0.09], 13);
+         function loadMap() {
+            var map = L.map('mapid').setView([43.225720, -79.860520], 10);
+         }
       </script>
    </body>
 
