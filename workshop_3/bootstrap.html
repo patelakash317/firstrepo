@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>HTML Explained</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-4" style="border: 1px dotted #000;background-color: #ddd;">1</div>
+				<div class="col-4" style="border: 1px dotted #000;background-color: rgb(221 221 221);">2</div>
+				<div class="col-4" style="border: 1px dotted #000;background-color: #dddddd;">3</div>
+				<hr/>
+			</div>
+			<div class="row">
+				<div col="col-4">
+					<h3>Normal table</h3>
+					<table>
+				      <caption>Optional table caption.</caption>
+				      <thead>
+				        <tr>
+				          <th>#</th>
+				          <th>First Name</th>
+				          <th>Last Name</th>
+				          <th>Username</th>
+				        </tr>
+				      </thead>
+				      <tbody>
+				        <tr>
+				          <th scope="row">1</th>
+				          <td>Mark</td>
+				          <td>Otto</td>
+				          <td>@mdo</td>
+				        </tr>
+				        <tr>
+				          <th scope="row">2</th>
+				          <td>Jacob</td>
+				          <td>Thornton</td>
+				          <td>@fat</td>
+				        </tr>
+				        <tr>
+				          <th scope="row">3</th>
+				          <td>Larry</td>
+				          <td>the Bird</td>
+				          <td>@twitter</td>
+				        </tr>
+				      </tbody>
+				    </table>
+				</div>
+
+				<div col="col-4">
+				    <h3>Bootstrap table</h3>
+				    <table class="table">
+				      <caption>Optional table caption.</caption>
+				      <thead>
+				        <tr>
+				          <th>#</th>
+				          <th>First Name</th>
+				          <th>Last Name</th>
+				          <th>Username</th>
+				        </tr>
+				      </thead>
+				      <tbody>
+				        <tr>
+				          <th scope="row">1</th>
+				          <td>Mark</td>
+				          <td>Otto</td>
+				          <td>@mdo</td>
+				        </tr>
+				        <tr>
+				          <th scope="row">2</th>
+				          <td>Jacob</td>
+				          <td>Thornton</td>
+				          <td>@fat</td>
+				        </tr>
+				        <tr>
+				          <th scope="row">3</th>
+				          <td>Larry</td>
+				          <td>the Bird</td>
+				          <td>@twitter</td>
+				        </tr>
+				      </tbody>
+				    </table>
+				</div>
+				<hr/>
+			</div>
+			<div class="row">
+				<div col="col-4">
+					<h3>Normal form:</h3>
+					<form>
+					  <div>
+					    <label for="exampleInputEmail1">Email address</label>
+					    <input type="email" id="exampleInputEmail1" placeholder="Email">
+					  </div>
+					  <div>
+					    <label for="exampleInputPassword1">Password</label>
+					    <input type="password" id="exampleInputPassword1" placeholder="Password">
+					  </div>
+					  <div>
+					    <label for="exampleInputFile">File input</label>
+					    <input type="file" id="exampleInputFile">
+					    <p class="">Example block-level help text here.</p>
+					  </div>
+					  <div >
+					    <label>
+					      <input type="checkbox"> Check me out
+					    </label>
+					  </div>
+					  <button type="submit" >Submit</button>
+					</form>
+				</div>
+
+				<div col="col-4">
+					<h3>Bootstrap form:</h3>
+					<form>
+					  <div class="form-group">
+					    <label for="exampleInputEmail2">Email address</label>
+					    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email">
+					  </div>
+					  <div class="form-group">
+					    <label for="exampleInputPassword2">Password</label>
+					    <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+					  </div>
+					  <div class="form-group">
+					    <label for="exampleInputFile2">File input</label>
+					    <input type="file" id="exampleInputFil2e">
+					    <p class="help-block">Example block-level help text here.</p>
+					  </div>
+					  <div class="checkbox">
+					    <label>
+					      <input type="checkbox"> Check me out
+					    </label>
+					  </div>
+					  <button type="submit" class="btn btn-primary">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

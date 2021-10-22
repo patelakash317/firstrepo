@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>HTML Explained</title>
+		<style type="text/css">
+			@media (min-width:320px)  { 
+				/* smartphones, iPhone, portrait 480x320 phones */ 
+				#content::after{ 
+					content: '320px'; 
+					    background-color: lightgreen;
+
+				} 
+			}
+			@media (min-width:481px)  { 
+				/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
+				#content::after{ 
+					content: '481px'; 
+					    background-color: lightgreen;
+
+				} 
+			}
+			@media (min-width:641px)  { 
+				/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+				#content::after{ 
+					content: '641px'; 
+					    background-color: lightgreen;
+
+				} 
+			}
+			@media (min-width:961px)  { 
+				/* tablet, landscape iPad, lo-res laptops ands desktops */ 
+				#content::after{ 
+					content: '961px'; 
+					    background-color: lightgreen;
+
+				} 
+			}
+			@media (min-width:1025px) { 
+				/* big landscape tablets, laptops, and desktops */ 
+				#content::after, #content::before{ 
+					content: '1025px'; 
+				    background-color: lightgreen;
+				    color: red;
+				}
+				.bg_blue {
+					background-color: blue;
+				} 
+			}
+			@media (min-width:1281px) { 
+				/* hi-res laptops and desktops */ 
+				#content::after{ 
+					content: '1281px'; 
+					    background-color: lightgreen;
+
+				} 
+			}
+		</style>
+	</head>
+	<body>
+		<div class="row">
+			<div id="content">Content</div>
+		</div>
+	</body>
+</html>

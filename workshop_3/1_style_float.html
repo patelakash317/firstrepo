@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>HTML Explained</title>
+		<link rel="stylesheet" href="../assets/css/styles.css">
+		<style type="text/css">
+			.width_250 {
+				width: 250px;
+				padding: 20px;
+				margin: 10px;
+				border: 1px solid #ddd;
+			}
+			.left-float_from_internal_css{ /*Comment Example -> Css to float element to left*/
+				float: left;
+			}
+			.right-float_from_internal_css{ /*Comment Example -> Css to float element to left*/
+				float: right;
+			}
+			.fix {
+				clear: both;
+			}
+			.div_in_center{
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<div>General</div>
+			<div>General</div>
+			<div>General</div>
+		</div>
+		<div>
+			<div class="width_250 left-float_from_internal_css">General</div>
+			<div class="width_250 left-float_from_external_css">General</div>
+			<div class="width_250" style="float: left;">General</div> <!-- Comment Example -> Inline style -->
+			<div class="width_250 right-float_from_internal_css">General to Right</div>
+			<div class="fix"></div>
+			<div class="width_250 div_in_center" style="float: center;">General to Center?</div>
+		</div>
+	</body>
+</html>

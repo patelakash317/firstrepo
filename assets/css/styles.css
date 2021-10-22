@@ -4,3 +4,6 @@
 .font-15 {
 	font-size: 15px;
 }
+.left-float_from_external_css{
+	float: left;
+}

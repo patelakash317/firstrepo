@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Javascript</title>
+   </head>
+   <body>
+      <button id="btn1" onclick="document.getElementById('btn1').innerHTML = 'btn1 Changed using Inline';">btn1 Change My text using Inline</button> <!-- inline script -->
+      <br/><br/>
+      <button id="btn2" onclick="internalCall();">btn2 Change My text using Internal</button>
+      <br/><br/>
+      <button id="btn3" onclick="externalCall();">btn3 Change My text using External</button>
+
+      <script src="../assets/js/myScript.js"></script> <!-- external script -->
+      <script> // internal script 
+         function internalCall(){
+            document.getElementById("btn2").innerHTML = "btn2 Changed using Internal";
+            document.getElementById("btn2").style.backgroundColor = "green";
+            document.getElementById("btn2").style.color = "white";
+            // Use ->     //         for commenting inside Javascript
+            // Use ->     /**/       for commenting inside CSS
+            // Use ->     <!-- -->   for commenting inside HTML
+         }
+      </script>
+   </body>
+
+</html>

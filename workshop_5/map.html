@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Location Map using Javascript</title>
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+
+      <style type="text/css">
+         #mapid { height: 180px; }
+      </style>
+   </head>
+   <body>
+      <div id="mapid"></div>
+
+      <script src="../assets/js/myScript.js"></script>
+      <script>
+         function internalCall(){
+            document.getElementById("btn2").innerHTML = "btn2 Changed using Internal";
+            document.getElementById("btn2").style.backgroundColor = "green";
+            document.getElementById("btn2").style.color = "white";
+         }
+      </script>
+
+      <!-- Make sure you put this AFTER Leaflet's CSS -->
+      <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+      <script type="text/javascript">
+         var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+      </script>
+   </body>
+
+</html>
