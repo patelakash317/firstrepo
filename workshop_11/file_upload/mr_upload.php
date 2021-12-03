@@ -1,15 +1,17 @@
 <?php
   $target_dir = "uploads/";
 
-  $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]); // simple as is
+  $new_file = basename($_FILES["fileToUpload"]["name"]); // simple as is
 
   // $md5 = md5("sample".$_FILES["fileToUpload"]["name"]); // md5
-  // $target_file = $target_dir . $md5.".jpg"; // md5
+  // $new_file = $md5.".jpg"; // md5
 
   // random characters
   // $bytes = random_bytes(20);
   // $target_files = bin2hex($bytes);
-  // $target_file = $target_dir . $target_files.".jpg";
+  // $new_file = $target_files.".jpg";
+
+  $target_file = $target_dir . $new_file;
 
   $uploadOk = 1;
   $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -52,8 +54,18 @@
   } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
       echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+      echo "<br/>";
+      echo hey_function_give_my_url().'/file_upload/uploads/'.$new_file;
     } else {
       echo "Sorry, there was an error uploading your file.";
     }
+  }
+
+  function hey_function_give_my_url(){
+    return sprintf(
+      "%s://%s",
+      isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http',
+      $_SERVER['SERVER_NAME']
+    );
   }
 ?>
