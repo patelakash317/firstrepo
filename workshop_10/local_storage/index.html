@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <div id="course"></div>
+    <div id="result"></div>
+
+    <script>
+      // Check browser support
+      if (typeof(Storage) !== "undefined") {
+        // Store
+        localStorage.setItem("university", "McMaster");
+        localStorage.setItem("course", "Web Systems and Web Computing");
+        // Retrieve
+        document.getElementById("result").innerHTML = "University: "+localStorage.getItem("university");
+        document.getElementById("course").innerHTML = "Course: "+localStorage.getItem("course");
+
+        localStorage.removeItem("course");
+
+      } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+      }
+    </script>
+
+  </body>
+</html>

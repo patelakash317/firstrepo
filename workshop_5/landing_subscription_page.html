@@ -1,0 +1,100 @@
+<html lang="en">
+	<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Landing subscription</title>
+
+		<link rel="stylesheet" href="./../assets/css/bootstrap/bootstrap.min.css">
+		<style type="text/css">
+			body {
+			  display: flex;
+			  align-items: center;
+			  padding-top: 40px;
+			  padding-bottom: 40px;
+			  background-color: #f5f5f5;
+			}
+
+			.form-signin {
+			  max-width: 330px;
+			  margin: 0 auto;
+			}
+
+			/*#txtname {
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+			#txtemail, #txtpwd {
+				border-radius: 0;
+			}
+			#txtconfpwd {
+				border-top-left-radius: 0;
+				border-top-right-radius: 0;
+			}*/
+		</style>
+  </head>
+
+  <body class="">
+    <form id="frmregistration" autocomplete="off" class="form-signin needs-validation"  onsubmit="return validateForm()">
+      <h4 class="text-center mb-4">WEB COMPUTING AND WEB SYSTEMS</h4>
+      <h5>Registration form</h5>
+
+      <div class="col-md-12">
+	      <label for="txtname" >Full name</label>
+	      <input autocomplete="txtname" type="text" id="txtname" class="form-control" autofocus="">
+	    </div>
+
+      <label for="txtemail" >Email address</label>
+      <input autocomplete="txtemail" type="text" id="txtemail" class="form-control">
+
+      <label for="txtpwd" >Password</label>
+      <input type="password" id="txtpwd" class="form-control" >
+
+      <label for="txtconfpwd" >Confirm password</label>
+      <input type="password" id="txtconfpwd" class="form-control" >
+
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+
+      <div class="d-grid gap-2">
+			  <button class="btn btn-primary" type="submit">Sign up</button>
+			</div>
+
+      <p class="mt-3 mb-3 text-muted text-center">Made by YOUR_NAME @2021</p>
+    </form>
+ 		
+ 		<script type="text/javascript">
+ 			// Using manual javascript validation
+	 			function validateForm() {
+	 				// name validation
+					  let name_value = document.forms["frmregistration"]["txtname"].value;
+					  if (name_value == "") {
+					    alert("Name must be filled out.");
+				    	document.getElementById('txtname').focus();
+					    return false;
+					  }
+	 				// name validation ends
+
+	 				// email validation using regex
+					  let email_value = document.forms["frmregistration"]["txtemail"].value;
+					  var re = /\S+@\S+\.\S+/; // email validation regex - Ex: abc@xyz.com - \S+ -> String
+
+					  if (email_value == "") {
+					  	alert("Email must be filled out.")
+				    	document.getElementById('txtemail').focus();
+					    return false;
+
+					  } else if(!re.test(email_value)){
+					  	alert("Email is invalid.")
+				    	document.getElementById('txtemail').focus();
+					    return false;
+
+					  }
+	 				// email validation using regex ends
+
+				}
+ 		</script>
+	</body>
+</html>
