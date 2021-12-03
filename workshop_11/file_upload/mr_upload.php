@@ -55,7 +55,9 @@
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
       echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
       echo "<br/>";
-      echo hey_function_give_my_url().'/file_upload/uploads/'.$new_file;
+      $full_n = hey_function_give_my_url().'/home/workshop_11/file_upload/uploads/'.$new_file;
+      echo $full_n;
+      echo "<br/><img src='".$full_n."' alt='uploaded image ".$new_file."' />";
     } else {
       echo "Sorry, there was an error uploading your file.";
     }
